@@ -167,7 +167,7 @@ public class DisplayCreateTrek extends javax.swing.JFrame {
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Details sent for Review!! \n You will be reached throrugh email");
+        JOptionPane.showMessageDialog(this, "Details sent for Review!! ");
     }//GEN-LAST:event_confirmButtonActionPerformed
 
     /**

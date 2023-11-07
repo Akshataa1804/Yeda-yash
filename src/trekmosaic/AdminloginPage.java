@@ -100,6 +100,7 @@ public class AdminloginPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminButtonActionPerformed
+
         // TODO add your handling code here:
         AdminloginPage.this.dispose();
         AdminLogin ad = new AdminLogin();
@@ -109,6 +110,7 @@ public class AdminloginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_adminButtonActionPerformed
 
     private void userButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userButtonActionPerformed
+        AdminloginPage.this.dispose();
         dashboard_v2 db = new dashboard_v2();
         db.setLocationRelativeTo(null);
         db.setVisible(true);

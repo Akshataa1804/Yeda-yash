@@ -94,7 +94,7 @@ public class verificationpopup extends javax.swing.JFrame {
                 denyButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(denyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 630, 180, 40));
+        jPanel1.add(denyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 610, 180, 40));
 
         approveButton.setBackground(new java.awt.Color(51, 255, 51));
         approveButton.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
@@ -105,7 +105,7 @@ public class verificationpopup extends javax.swing.JFrame {
                 approveButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(approveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 180, 40));
+        jPanel1.add(approveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, 180, 40));
 
         backButton.setText("BACK");
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +113,7 @@ public class verificationpopup extends javax.swing.JFrame {
                 backButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 630, 130, 30));
+        jPanel1.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 610, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +145,7 @@ public class verificationpopup extends javax.swing.JFrame {
             stm2.setString(1, Name);
         } catch (SQLException ex) {
         }
-        JOptionPane.showConfirmDialog(this, "This user has been verified");
+        JOptionPane.showConfirmDialog(this, "This user has been deniesf");
     }//GEN-LAST:event_denyButtonActionPerformed
 
     private void approveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveButtonActionPerformed
@@ -165,10 +165,9 @@ public class verificationpopup extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        AdminVerification av = new AdminVerification();
+
         verificationpopup.this.dispose();
-        av.setLocationRelativeTo(null);
-        av.setVisible(true);
+
     }//GEN-LAST:event_backButtonActionPerformed
     
     public void setName(String name) {

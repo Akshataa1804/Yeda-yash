@@ -83,6 +83,7 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(loginPasswordField);
         loginPasswordField.setBounds(560, 190, 150, 40);
 
+        loginButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton.setText("Sign in");
         loginButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -91,8 +92,9 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(loginButton);
-        loginButton.setBounds(490, 260, 130, 40);
+        loginButton.setBounds(490, 270, 150, 40);
 
+        registerButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         registerButton.setText("Create an account");
         registerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +102,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(registerButton);
-        registerButton.setBounds(490, 320, 130, 40);
+        registerButton.setBounds(490, 320, 150, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/BGpict.jpg"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -115,7 +117,7 @@ public class login extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         jButton3.setText("HOME");
-        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -191,7 +193,7 @@ public class login extends javax.swing.JFrame {
                     UserIndoData.setAge(age);
                     UserIndoData.setEmail(email);
                     
-                    JOptionPane.showConfirmDialog(this, "Login Successful");
+                    JOptionPane.showMessageDialog(this, "Login Successful");
                     //profile p = new profile();
                     //p.setName(name);
                     

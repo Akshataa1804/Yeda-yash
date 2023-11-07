@@ -46,7 +46,6 @@ public class AdminLogin extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setMaximumSize(new java.awt.Dimension(1080, 720));
         setMinimumSize(new java.awt.Dimension(1080, 720));
-        setPreferredSize(new java.awt.Dimension(1080, 720));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -103,10 +102,10 @@ public class AdminLogin extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/bgmtresizeddddd.jpg"))); // NOI18N
         jLabel3.setOpaque(true);
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(-20, 10, 1000, 570);
+        jLabel3.setBounds(0, 0, 1080, 720);
         jLabel3.getAccessibleContext().setAccessibleName("");
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 0, 970, 590));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,7 +122,7 @@ public class AdminLogin extends javax.swing.JFrame {
 
             Connection con = DatabaseConnection.connect();
 
-            String query = "SELECT * FROM admin_login WHERE username=?";
+            String query = "SELECT * FROM admin_login WHERE username = ? ";
             PreparedStatement statement = con.prepareStatement(query);
             statement.setString(1, username);
             ResultSet result = statement.executeQuery();
@@ -132,10 +131,12 @@ public class AdminLogin extends javax.swing.JFrame {
                 String storedPassword = result.getString("password");
 
                 if (password.equals(storedPassword)) {
-                    AdminLogin.this.dispose();
                     JOptionPane.showMessageDialog(this, "Login Successful");
+                    AdminLogin.this.dispose();
+
                     AdminDashboard ad = new AdminDashboard();
                     ad.setLocationRelativeTo(null);
+
                     ad.setVisible(true);
                     
 

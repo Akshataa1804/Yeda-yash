@@ -163,7 +163,7 @@ public class aboutTrek extends javax.swing.JFrame {
             try {
                 if (resultSet.next()) {
 
-                    info = resultSet.getString("info");
+                    info = resultSet.getString("new_info");
 
                     resultSet.close();
                     statement.close();

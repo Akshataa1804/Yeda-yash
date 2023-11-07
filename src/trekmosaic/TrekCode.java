@@ -9,7 +9,7 @@ package trekmosaic;
  * @author ADMIN
  */
 public class TrekCode {
-    public static int x_label = 540;
+    public static int x_label = 0;
     public static int y_label = 250;
     public static int width_label = 270;
     public static int height_label = 240;

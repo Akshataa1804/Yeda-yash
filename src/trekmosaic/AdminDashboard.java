@@ -129,9 +129,9 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void signOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutActionPerformed
         // TODO add your handling code here:
         AdminDashboard.this.dispose();;
-        AdminLogin g = new AdminLogin();
-        g.setLocationRelativeTo(null);
-        g.setVisible(true);
+        AdminloginPage ad = new AdminloginPage();
+        ad.setLocationRelativeTo(null);
+        ad.setVisible(true);
     }//GEN-LAST:event_signOutActionPerformed
 
     private void userDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userDetailsActionPerformed

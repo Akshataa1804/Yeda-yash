@@ -40,9 +40,6 @@ public class TrekJoinInfo extends javax.swing.JFrame {
         trekNameLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         itinenaryText = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
         itinaryLabel = new javax.swing.JLabel();
         locationLabel = new javax.swing.JLabel();
         heightLabel = new javax.swing.JLabel();
@@ -52,7 +49,6 @@ public class TrekJoinInfo extends javax.swing.JFrame {
         InclusionText = new javax.swing.JTextArea();
         PriceLabel = new javax.swing.JLabel();
         joinButton = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setResizable(false);
@@ -99,23 +95,6 @@ public class TrekJoinInfo extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 290, 340));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("DATES AVAILABLE");
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 6, 190, 26));
-
-        jList1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jList1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "24th Thursday", "25th Friday", "30th Saturday" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList1);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 38, 156, 23));
-
         itinaryLabel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         itinaryLabel.setText("Itinerary :");
         itinaryLabel.setToolTipText("");
@@ -149,7 +128,7 @@ public class TrekJoinInfo extends javax.swing.JFrame {
 
         PriceLabel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         PriceLabel.setText("PRICE : ");
-        jPanel1.add(PriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 600, 320, -1));
+        jPanel1.add(PriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 320, -1));
 
         joinButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         joinButton.setText("BOOK NOW");
@@ -158,10 +137,7 @@ public class TrekJoinInfo extends javax.swing.JFrame {
                 joinButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(joinButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, 173, 39));
-
-        jLabel10.setText("CREATOR PROFILE :");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 79, 300, 27));
+        jPanel1.add(joinButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 600, 173, 39));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/BGpict.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, -1));
@@ -286,13 +262,9 @@ public class TrekJoinInfo extends javax.swing.JFrame {
     private javax.swing.JLabel itinaryLabel;
     private javax.swing.JTextArea itinenaryText;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JButton joinButton;
     private javax.swing.JLabel locationLabel;

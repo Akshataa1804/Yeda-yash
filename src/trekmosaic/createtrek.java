@@ -62,7 +62,6 @@ public class createtrek extends javax.swing.JFrame {
         attachButton = new javax.swing.JButton();
         attachtextButton = new javax.swing.JButton();
         infoAttach = new javax.swing.JButton();
-        addGearButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -256,15 +255,6 @@ public class createtrek extends javax.swing.JFrame {
         });
         jPanel1.add(infoAttach);
         infoAttach.setBounds(890, 300, 100, 20);
-
-        addGearButton.setText("ADD GEAR");
-        addGearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addGearButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(addGearButton);
-        addGearButton.setBounds(700, 570, 110, 40);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Attach Info text file");
@@ -474,14 +464,6 @@ public class createtrek extends javax.swing.JFrame {
       infoNameField.setText(s);
     }//GEN-LAST:event_infoAttachActionPerformed
 
-    private void addGearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addGearButtonActionPerformed
-        // TODO add your handling code here:
-        addGear g = new addGear();
-        createtrek.this.dispose();
-        g.setLocationRelativeTo(null);
-        g.setVisible(true);
-    }//GEN-LAST:event_addGearButtonActionPerformed
-
     private void infoNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoNameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_infoNameFieldActionPerformed
@@ -492,7 +474,6 @@ public class createtrek extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addGearButton;
     private javax.swing.JButton attachButton;
     private javax.swing.JButton attachtextButton;
     private javax.swing.JButton confirmbutton;

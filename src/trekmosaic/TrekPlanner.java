@@ -8,7 +8,7 @@ package trekmosaic;
  *
  * @author ADMIN
  */
-public class TrekPlanner {
+class TrekPlanner {
 
     public static void main(String[] args) {
       AdminloginPage ad = new AdminloginPage();

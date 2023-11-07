@@ -12,6 +12,7 @@ import java.lang.System.Logger.Level;
 import java.sql.*;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 public class addGear extends javax.swing.JFrame {
 
     /**
@@ -60,25 +61,25 @@ public class addGear extends javax.swing.JFrame {
         jLblcreate_trek.setText("ADD GEAR");
         jPanel1.add(jLblcreate_trek, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 33, 246, 52));
 
-        jlabitinary.setFont(new java.awt.Font("BankGothic Md BT", 0, 18)); // NOI18N
+        jlabitinary.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlabitinary.setForeground(new java.awt.Color(255, 255, 255));
         jlabitinary.setText("PRICE");
-        jPanel1.add(jlabitinary, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 182, 47));
+        jPanel1.add(jlabitinary, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 182, 47));
 
-        jlbheight.setFont(new java.awt.Font("BankGothic Md BT", 0, 18)); // NOI18N
+        jlbheight.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbheight.setForeground(new java.awt.Color(255, 255, 255));
         jlbheight.setText("Feature2");
-        jPanel1.add(jlbheight, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 182, 47));
+        jPanel1.add(jlbheight, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 182, 47));
 
-        jlabeltransportation.setFont(new java.awt.Font("BankGothic Md BT", 0, 18)); // NOI18N
+        jlabeltransportation.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlabeltransportation.setForeground(new java.awt.Color(255, 255, 255));
         jlabeltransportation.setText("Feature3");
-        jPanel1.add(jlabeltransportation, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 182, 47));
+        jPanel1.add(jlabeltransportation, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 182, 47));
 
-        jlbinclusion.setFont(new java.awt.Font("BankGothic Md BT", 0, 18)); // NOI18N
+        jlbinclusion.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbinclusion.setForeground(new java.awt.Color(255, 255, 255));
-        jlbinclusion.setText("Upload Image");
-        jPanel1.add(jlbinclusion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 182, 47));
+        jlbinclusion.setText("Upload Image (jpeg )");
+        jPanel1.add(jlbinclusion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 182, 47));
 
         PriceField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,15 +109,15 @@ public class addGear extends javax.swing.JFrame {
         });
         jPanel1.add(imageField, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 456, 228, 49));
 
-        jlbtrekname.setFont(new java.awt.Font("BankGothic Md BT", 0, 18)); // NOI18N
+        jlbtrekname.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbtrekname.setForeground(new java.awt.Color(255, 255, 255));
-        jlbtrekname.setText("Name of item");
-        jPanel1.add(jlbtrekname, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 182, 47));
+        jlbtrekname.setText("Name of Item");
+        jPanel1.add(jlbtrekname, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 120, 47));
 
-        jlblocation1.setFont(new java.awt.Font("BankGothic Md BT", 0, 18)); // NOI18N
+        jlblocation1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlblocation1.setForeground(new java.awt.Color(255, 255, 255));
-        jlblocation1.setText("Feature1");
-        jPanel1.add(jlblocation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 140, 47));
+        jlblocation1.setText("Feature 1");
+        jPanel1.add(jlblocation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 100, 47));
 
         gearItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +143,7 @@ public class addGear extends javax.swing.JFrame {
                 confirmbuttonActionPerformed(evt);
             }
         });
-        jPanel1.add(confirmbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, 120, 40));
+        jPanel1.add(confirmbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 550, 120, 40));
 
         homeButton.setBackground(new java.awt.Color(102, 102, 102));
         homeButton.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
@@ -153,7 +154,7 @@ public class addGear extends javax.swing.JFrame {
                 homeButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(homeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, 120, 40));
+        jPanel1.add(homeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 640, 120, 40));
 
         attachButton.setBackground(new java.awt.Color(102, 102, 102));
         attachButton.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
@@ -226,10 +227,11 @@ public class addGear extends javax.swing.JFrame {
         String enteredfeature3 = Feature3Field.getText();
         int enteredPrice = Integer.parseInt(PriceField.getText());
         
-        
-
-     
-
+        GearData.setName(enteredName);
+        GearData.setfeature1(enteredfeature1);
+        GearData.setfeature2(enteredfeature2);
+        GearData.setfeature3(enteredfeature3);
+        GearData.setPrice(enteredPrice);
      
         Connection con = DatabaseConnection.connect();
         String trekQuery = "INSERT into gear_data(name, feature1, feature2, feature3, price,image) VALUES(?,?,?,?,?,?)";
@@ -252,6 +254,7 @@ public class addGear extends javax.swing.JFrame {
             }
 
             statement.executeUpdate();
+            JOptionPane.showConfirmDialog(this, "hence details confirmed!");
         }
         catch(SQLException ex){System.out.print(ex);}
         finally{
@@ -279,7 +282,7 @@ public class addGear extends javax.swing.JFrame {
         File f = chooser.getSelectedFile();
         filename = f.getAbsolutePath();
         TrekData.setFilename(filename);
-        
+        imageField.setText(filename);
         
     }//GEN-LAST:event_attachButtonActionPerformed
    

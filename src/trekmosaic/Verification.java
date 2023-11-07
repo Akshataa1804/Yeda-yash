@@ -38,12 +38,11 @@ public class Verification extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         verifyButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         homeButton = new javax.swing.JButton();
         uploaddoc = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,17 +55,12 @@ public class Verification extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1080, 720));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Verfication ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 214, 70));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 214, 70));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText(" Upload id :");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 108, 41));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 206, 47));
-
+        verifyButton.setBackground(new java.awt.Color(204, 204, 204));
         verifyButton.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         verifyButton.setText("Verify");
         verifyButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -75,13 +69,9 @@ public class Verification extends javax.swing.JFrame {
                 verifyButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(verifyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 100, 30));
+        jPanel1.add(verifyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 160, 30));
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel4.setText("                1-2 processing days to verify");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 460, 328, 31));
-
-        homeButton.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        homeButton.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         homeButton.setText("HOME");
         homeButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         homeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -89,17 +79,31 @@ public class Verification extends javax.swing.JFrame {
                 homeButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(homeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 100, 30));
+        jPanel1.add(homeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 530, 140, 50));
 
+        uploaddoc.setBackground(new java.awt.Color(204, 204, 204));
         uploaddoc.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         uploaddoc.setText("Upload Documents");
-        uploaddoc.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        uploaddoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         uploaddoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uploaddocActionPerformed(evt);
             }
         });
-        jPanel1.add(uploaddoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 150, 30));
+        jPanel1.add(uploaddoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 170, 40));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Upload Adhar Card image (png) :");
+        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 290, -1));
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Proceed To Verify :");
+        jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 160, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/BGpict.jpg"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1270, 730));
@@ -112,7 +116,7 @@ public class Verification extends javax.swing.JFrame {
 
     private void verifyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verifyButtonActionPerformed
        
-        UserData.verify = 1;
+        UserData.verify = 0;
         UserIndoData u = new UserIndoData();
         u.setPendingVerification(UserIndoData.getName());
         name = UserIndoData.getName();
@@ -194,6 +198,11 @@ public class Verification extends javax.swing.JFrame {
         File f = chooser.getSelectedFile();
         filename = f.getAbsolutePath();
         
+        if (filename!= null)
+        {
+            JOptionPane.showConfirmDialog(this, "Image Uploaded");
+        }
+        
 
     }//GEN-LAST:event_uploaddocActionPerformed
 
@@ -204,11 +213,10 @@ public class Verification extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton homeButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JButton uploaddoc;
     private javax.swing.JButton verifyButton;
     // End of variables declaration//GEN-END:variables

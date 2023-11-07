@@ -24,13 +24,14 @@ import javax.swing.Icon;
  */
 public class profile extends javax.swing.JFrame {
 
-    /**
-     * Creates new form profile
-     */
     public profile() {
         
         
         initComponents();
+        //addImagePanel(UserIndoData.getName());
+        String temp = getVerificationStatus(UserIndoData.getName());
+         setVerificationLabel(temp);
+         
     }
 
     /**
@@ -54,9 +55,6 @@ public class profile extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         verifybutton = new javax.swing.JButton();
         nameLabel = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        blankpfp = new javax.swing.JLabel();
-        uploadButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JoinedTreks = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
@@ -64,13 +62,12 @@ public class profile extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         createdTrek = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setResizable(false);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1080, 720));
         jPanel1.setMinimumSize(new java.awt.Dimension(1080, 720));
@@ -80,12 +77,14 @@ public class profile extends javax.swing.JFrame {
         textArea1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         textArea1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(textArea1);
-        textArea1.setBounds(120, 320, 500, 80);
+        textArea1.setBounds(130, 310, 500, 80);
 
         locationLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 21)); // NOI18N
-        locationLabel.setText("location : ");
+        locationLabel.setForeground(new java.awt.Color(255, 255, 255));
+        locationLabel.setText("Location : ");
+        locationLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(locationLabel);
-        locationLabel.setBounds(150, 180, 320, 30);
+        locationLabel.setBounds(20, 190, 310, 30);
 
         jButton4.setText("home");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -96,75 +95,65 @@ public class profile extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(1325, 682, 93, 23);
 
-        jButton1.setBackground(new java.awt.Color(102, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 255));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Yu Gothic UI", 0, 24)); // NOI18N
         jButton1.setText("HOME");
-        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(590, 580, 110, 40);
+        jButton1.setBounds(700, 580, 140, 50);
 
-        myprofiletext.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        myprofiletext.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
+        myprofiletext.setForeground(new java.awt.Color(255, 255, 255));
         myprofiletext.setText("MY PROFILE");
         jPanel1.add(myprofiletext);
-        myprofiletext.setBounds(20, 30, 120, 50);
+        myprofiletext.setBounds(20, 30, 290, 50);
 
         ageLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 21)); // NOI18N
-        ageLabel.setText("age : ");
+        ageLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ageLabel.setText("Age : ");
+        ageLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(ageLabel);
-        ageLabel.setBounds(150, 140, 310, 29);
+        ageLabel.setBounds(20, 150, 310, 33);
 
         instagramLabel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         instagramLabel.setText("instagram : ");
         jPanel1.add(instagramLabel);
         instagramLabel.setBounds(100, 600, 430, 20);
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("About me : ");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(40, 320, 72, 20);
+        jLabel7.setBounds(20, 320, 100, 25);
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jLabel10.setText("Connect with me : ");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(50, 570, 135, 22);
+        jLabel10.setBounds(50, 570, 138, 22);
 
+        verifybutton.setBackground(new java.awt.Color(204, 204, 204));
         verifybutton.setText("VERIFY PROFILE");
+        verifybutton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         verifybutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verifybuttonActionPerformed(evt);
             }
         });
         jPanel1.add(verifybutton);
-        verifybutton.setBounds(600, 110, 130, 30);
+        verifybutton.setBounds(660, 70, 130, 30);
 
-        nameLabel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 21)); // NOI18N
-        nameLabel.setText("name :");
+        nameLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 21)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("Name :");
         nameLabel.setToolTipText("");
+        nameLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(nameLabel);
-        nameLabel.setBounds(150, 110, 230, 20);
-
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        blankpfp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EMPTY_PFP.png"))); // NOI18N
-        jPanel2.add(blankpfp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 150));
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(10, 90, 130, 130);
-
-        uploadButton.setText("Upload Picture");
-        uploadButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                uploadButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(uploadButton);
-        uploadButton.setBounds(20, 240, 120, 23);
+        nameLabel.setBounds(20, 110, 310, 30);
 
         JoinedTreks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -214,30 +203,19 @@ public class profile extends javax.swing.JFrame {
         jScrollPane2.setViewportView(createdTrek);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(260, 410, 130, 120);
+        jScrollPane2.setBounds(280, 410, 130, 120);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("VERIFICATION STATUS : ");
+        jLabel1.setText("Add your About Me :");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(500, 10, 320, 50);
-
-        jButton3.setText("test");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(650, 450, 72, 23);
+        jLabel1.setBounds(640, 350, 160, 16);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/BGpict.jpg"))); // NOI18N
         jLabel2.setToolTipText("");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, -20, 1080, 720);
+        jLabel2.setBounds(0, 0, 1080, 720);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 890, 690);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -248,28 +226,7 @@ public class profile extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        if(UserData.upload == 1){
-        Connection con = DatabaseConnection.connect();
-        String query = "UPDATE user_data SET pfp = ? WHERE name = ?";
         
-        try {
-            PreparedStatement stm = con.prepareStatement(query);
-            FileInputStream fis;
-            try {
-                fis = new FileInputStream(filename);
-                stm.setBinaryStream(1, fis);
-                stm.setString(2, Name);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(profile.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            stm.executeUpdate();
-            stm.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(profile.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            DatabaseConnection.disconnect();
-        }
-        }
          
         
         
@@ -288,23 +245,32 @@ public class profile extends javax.swing.JFrame {
         verify.setLocationRelativeTo(null);
         verify.setVisible(true);
     }//GEN-LAST:event_verifybuttonActionPerformed
-
-    private void uploadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadButtonActionPerformed
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(null);
-        File f = chooser.getSelectedFile();
-        filename = f.getAbsolutePath();
-        UserData.setFilename(filename);
+   
+    void setVerificationLabel(String txt){
+        if(txt != null){
        
-        UserData.upload = 1;
-        if(UserData.upload == 1)
-        {        
-        addImagePanel(filename);
         }
-    }//GEN-LAST:event_uploadButtonActionPerformed
+    }
     
-    
-    
+    String getVerificationStatus(String name){
+        try {
+          
+            Connection con = DatabaseConnection.connect();
+            String selectQuery = "SELECT verification_status FROM user_data WHERE name = ?";
+            PreparedStatement stm = con.prepareStatement(selectQuery);
+            stm.setString(1, name);
+            
+            ResultSet result = stm.executeQuery();
+            if(result.next()){
+                if(verification != null){
+                    verification = result.getString("verification_status");
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(profile.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return verification;
+    }
     
     private void addLINKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addLINKActionPerformed
         // TODO add your handling code here:
@@ -359,48 +325,7 @@ public class profile extends javax.swing.JFrame {
         AboutMe.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        AdminVerification p = new AdminVerification();
-        p.setLocationRelativeTo(null);
-        p.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-    public void addImagePanel() {
-        ImagePanel = new javax.swing.JPanel();
-        ImagePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(ImagePanel);
-        ImagePanel.setBounds(10, 90, 130, 130);
 
-        ImageIcon icon = null;
-        if (filename != null) {
-            icon = new ImageIcon(filename);
-        } else {
-            icon = getImageFromDatabase(Name);
-        }
-
-        ImageLabel = new javax.swing.JLabel(icon);
-        ImagePanel.add(ImageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 130));
-
-
-
-    }
-        private void addImagePanel(String filename){
-       ImagePanel = new javax.swing.JPanel();
-       
-       ImagePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-       jPanel1.add(ImagePanel);
-       ImagePanel.setBounds(10, 90, 130, 130);
-       
-       ImageLabel = new javax.swing.JLabel();
-       ImageIcon icon = new ImageIcon(filename);
-       ImageLabel.setIcon(icon);
-       ImagePanel.add(ImageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 130));
-       
-    ImagePanel.revalidate();
-    ImagePanel.repaint();
-       
-    }
-    
     void setFilename(String txt){
         filename = txt;
     }
@@ -459,30 +384,28 @@ public class profile extends javax.swing.JFrame {
     private javax.swing.JTable JoinedTreks;
     private javax.swing.JButton addLINK;
     private javax.swing.JLabel ageLabel;
-    private javax.swing.JLabel blankpfp;
     private javax.swing.JTable createdTrek;
     private javax.swing.JLabel instagramLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel locationLabel;
     private javax.swing.JLabel myprofiletext;
     private javax.swing.JLabel nameLabel;
     private java.awt.TextArea textArea1;
-    private javax.swing.JButton uploadButton;
     private javax.swing.JButton verifybutton;
     // End of variables declaration//GEN-END:variables
     private javax.swing.JPanel ImagePanel;
     private javax.swing.JLabel ImageLabel;
+    private javax.swing.JLabel JLabel;
     String Name;
     String filename;
+    String verification;
 }

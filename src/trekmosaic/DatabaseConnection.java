@@ -12,7 +12,7 @@ public class DatabaseConnection {
     public static Connection connect(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trekmosaicdb", "root" , "123456");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trekmosaicdb", "root" , "Akshu@1804");
             return con; 
             
         } catch(Exception e){

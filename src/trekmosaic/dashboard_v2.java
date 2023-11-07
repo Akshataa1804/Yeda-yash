@@ -40,6 +40,7 @@ public class dashboard_v2 extends javax.swing.JFrame {
         db_plannerlabel2 = new javax.swing.JLabel();
         create_trek_button = new javax.swing.JButton();
         my_profile_button = new javax.swing.JButton();
+        signOutbutton = new javax.swing.JButton();
         join_trek_button1 = new javax.swing.JButton();
         info_trek_button = new javax.swing.JButton();
         about_us = new javax.swing.JButton();
@@ -144,6 +145,18 @@ public class dashboard_v2 extends javax.swing.JFrame {
         getContentPane().add(my_profile_button);
         my_profile_button.setBounds(150, 570, 140, 40);
 
+        signOutbutton.setBackground(new java.awt.Color(204, 204, 204));
+        signOutbutton.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
+        signOutbutton.setText("SIGN OUT");
+        signOutbutton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        signOutbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signOutbuttonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(signOutbutton);
+        signOutbutton.setBounds(890, 60, 170, 36);
+
         join_trek_button1.setBackground(new java.awt.Color(204, 204, 204));
         join_trek_button1.setFont(new java.awt.Font("Swis721 Cn BT", 1, 24)); // NOI18N
         join_trek_button1.setForeground(new java.awt.Color(51, 51, 51));
@@ -180,7 +193,7 @@ public class dashboard_v2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(about_us);
-        about_us.setBounds(960, 60, 100, 30);
+        about_us.setBounds(960, 110, 100, 30);
 
         gearButton.setBackground(new java.awt.Color(204, 204, 204));
         gearButton.setFont(new java.awt.Font("Swis721 Cn BT", 1, 24)); // NOI18N
@@ -207,9 +220,6 @@ public class dashboard_v2 extends javax.swing.JFrame {
         loginButton.setBounds(890, 10, 170, 40);
 
         db_bgimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Untitleddesign.png"))); // NOI18N
-        db_bgimage.setMaximumSize(new java.awt.Dimension(1080, 720));
-        db_bgimage.setMinimumSize(new java.awt.Dimension(1080, 720));
-        db_bgimage.setPreferredSize(new java.awt.Dimension(1080, 720));
         getContentPane().add(db_bgimage);
         db_bgimage.setBounds(0, -50, 1080, 730);
         getContentPane().add(jPanel2);
@@ -227,8 +237,8 @@ public class dashboard_v2 extends javax.swing.JFrame {
     }//GEN-LAST:event_info_trek_buttonActionPerformed
 
     private void create_trek_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_trek_buttonActionPerformed
-        // TODO add your handling code here:
-        if(UserData.check == 1 && UserData.verify == 1){
+      int verify =   UserData.checkverify(UserIndoData.getName());
+        if(UserData.check == 1 && verify == 1){
              
         dashboard_v2.this.dispose();
         createtrek createTrek = new createtrek();
@@ -241,7 +251,7 @@ public class dashboard_v2 extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(this, "Register or Sign to Continue.");
             }
-            else if(UserData.verify == 0)
+            else if(verify == 0)
                     {
                 JOptionPane.showMessageDialog(this, "Vetify your profile to create trek");
                     }
@@ -250,6 +260,7 @@ public class dashboard_v2 extends javax.swing.JFrame {
 
     private void my_profile_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_my_profile_buttonActionPerformed
         // TODO add your handling code here:
+       if(UserData.check == 1){
         dashboard_v2.this.dispose();
         
         profile create_profile = new profile();
@@ -272,7 +283,9 @@ public class dashboard_v2 extends javax.swing.JFrame {
        
         create_profile.setLocationRelativeTo(null);
         create_profile.setVisible(true);
-       
+       } else {
+           JOptionPane.showMessageDialog(this, "Sign in to continue. ");
+       }
     }//GEN-LAST:event_my_profile_buttonActionPerformed
 
     private void join_trek_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_join_trek_button1ActionPerformed
@@ -333,6 +346,16 @@ public class dashboard_v2 extends javax.swing.JFrame {
         signIn.setVisible(true);
     }//GEN-LAST:event_loginButtonActionPerformed
 
+    private void signOutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutbuttonActionPerformed
+        // TODO add your handling code here:
+        UserData.check = 0;
+        UserData.check = 0;
+        dashboard_v2.this.dispose();
+        AdminloginPage ad = new AdminloginPage();
+        ad.setLocationRelativeTo(null);
+        ad.setVisible(true);
+    }//GEN-LAST:event_signOutbuttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -356,6 +379,7 @@ public class dashboard_v2 extends javax.swing.JFrame {
     private javax.swing.JButton loginb1;
     private javax.swing.JDialog loginpopup;
     private javax.swing.JButton my_profile_button;
+    private javax.swing.JButton signOutbutton;
     private javax.swing.JLabel treklabel1;
     // End of variables declaration//GEN-END:variables
 }

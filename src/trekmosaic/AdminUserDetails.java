@@ -83,7 +83,7 @@ public class AdminUserDetails extends javax.swing.JFrame {
         jScrollPane1.setViewportView(gearTable);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(530, 410, 540, 220);
+        jScrollPane1.setBounds(530, 390, 520, 220);
 
         trektable.setBackground(new java.awt.Color(204, 204, 204));
         trektable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -115,30 +115,30 @@ public class AdminUserDetails extends javax.swing.JFrame {
         jScrollPane2.setViewportView(trektable);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(0, 410, 530, 220);
+        jScrollPane2.setBounds(10, 390, 490, 220);
 
         usersTable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         usersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Name", "username", "email", "age", "location", "trek enrolled"
+                "Name", "username", "email", "age", "location"
             }
         ));
         jScrollPane3.setViewportView(usersTable);
 
         jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(0, 120, 730, 220);
+        jScrollPane3.setBounds(10, 120, 730, 220);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -150,14 +150,14 @@ public class AdminUserDetails extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Gear Details ");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(530, 360, 130, 40);
+        jLabel3.setBounds(530, 350, 130, 40);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Details about treks");
         jLabel4.setToolTipText("");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(10, 370, 220, 40);
+        jLabel4.setBounds(10, 360, 220, 40);
 
         backButton.setText("HOME");
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +166,7 @@ public class AdminUserDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(backButton);
-        backButton.setBounds(190, 660, 100, 40);
+        backButton.setBounds(190, 640, 100, 40);
 
         RefreshButton.setText("REFRESH");
         RefreshButton.addActionListener(new java.awt.event.ActionListener() {
@@ -175,7 +175,7 @@ public class AdminUserDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(RefreshButton);
-        RefreshButton.setBounds(20, 660, 140, 30);
+        RefreshButton.setBounds(10, 640, 140, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/bgmtresizeddddd.jpg"))); // NOI18N
         jPanel1.add(jLabel1);

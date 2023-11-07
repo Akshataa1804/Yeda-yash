@@ -89,7 +89,11 @@ public class TrekInfo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+            // TODO add your handling code here:
+        aboutTrek a = new aboutTrek();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
     
     void setTrekArea(String info) {
